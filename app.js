@@ -143,3 +143,24 @@ const splitedData = data.split(';');
 
 console.log(splitedData);
 console.log(splitedData.join('_'));
+
+const numbers = [2, 60, -5, 0, 10];
+
+console.log(Math.min(...numbers));
+
+const persons = [
+  { name: 'mehran', age: 26 },
+  { name: 'amin', age: 24 },
+  { name: 'maximilian', age: 40 },
+];
+
+const copyPersons = [
+  ...persons.map((person) => {
+    return { ...person };
+  }),
+];
+
+persons.push({ name: 'jonas', age: 40 });
+persons[1].age = 10;
+
+console.log(persons, copyPersons);
